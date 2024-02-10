@@ -33,4 +33,9 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: advanced-security/secret-scanning-review-action@9e85f0322d86b08a398543a5e878015f547b2213
         uses: advanced-security/secret-scanning-review-action@v0
+        with:
+          # GitHub Access Token that provides access to the repository. Must be provided via either parameter or environment variable. The github.token cannot be used as it does not provide secret scanning alert access.
+          token: $(token)
+          fail-on-alert: false
+          fail-on-alert-exclude-closed: false
           
